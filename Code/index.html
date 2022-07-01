@@ -1,2 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go PLP Go</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            font-family: lexend deca;
+        }
+        body {
+            background-color: rgb(13, 13, 14);
+        }
+        .button {
+            border-radius: 10px;
+            padding: 14px 24px;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            background-color: dodgerblue;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .paperdiv {
+            background-color: white;
+            aspect-ratio: 22/17;
+            width: 50%;
+            display: grid;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .borderimg {
+            width: 100%;
+        }
+        @media only screen and (max-width: 600px) {
+            .paperdiv {
+                width: calc(100% - 15px);
+            }
+        }
+    </style>
 
-<h1>test</h1>
+    <center>
+        <br><br>
+        <div class="paperdiv" >
+            <img id="innerimg" class="borderimg" >
+        </div>
+        <br><br>
+        <button onclick="random()" class="button">New Border</button>
+        <br><br><br>
+    </center>
+
+    <script>
+        function random() {
+            var innernumber = Math.floor(Math.random() * 8) + 1;
+            document.getElementById("innerimg").src = "https://github.com/croznoah/Border-Generator/blob/main/Assets/" + innernumber + ".png?raw=true";
+        }
+    </script>
+
+</body>
+</html>

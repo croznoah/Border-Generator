@@ -141,7 +141,6 @@
                 margin: 0px;
                 page-break-after: always;
                 page-break-before: always;
-                clear: both;
                 transform: scale(1.02);
             }
             .scrollcontainer {
@@ -159,13 +158,26 @@
             margin: 0;
         }
         @media only screen and (max-width: 600px) {
-            .paperdiv {
-                max-height: 60vw;
-                top: 50%;
-                transform: translateY(-50%);
-            }
             .buttontxt {
                 display: none;
+            }
+            .scrollcontainer {
+                height: fit-content;
+                overflow-y: hidden;
+                overflow-x: auto;
+                padding: 0px 30px;
+                display: block;
+            }
+            .paperdiv {
+                margin: 30px 0px;
+            }
+            body {
+                overflow-y: auto;
+            }
+            .layout {
+                position: relative;
+                height: fit-content;
+                display: block;
             }
         }
     </style>
@@ -183,7 +195,7 @@
         </div>
         <center>
             <div class="scrollcontainer">
-                <div class="paperdiv" id="pageid1" >
+                <div class="paperdiv" id="pageid1">
                     <img id="inner1" class="borderimg" >
                     <img id="outer1" class="borderimg" >
                 </div>

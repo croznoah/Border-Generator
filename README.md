@@ -1,4 +1,4 @@
 # Border-Generator
 Generate unique borders for the Great Piranha
 
-gpborders.epizy.com
+https://gpborders.epizy.com
